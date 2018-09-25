@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vartyr.inmobi_mediation_android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Optional.  Excluding these can negatively affect fill rate. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Optional.  If excluded, ads will not be cached. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- For InMobi rich media ads -->
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+
+    <!--TODO: Ensure that we enable all the proper permissions for all the mediated platforms if we are using them-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.aerserv.sdk.view.ASVastInterstitialActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.aerserv.sdk.view.ASWebviewInterstitialActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.aerserv.sdk.view.ASVpaidInterstitalActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.aerserv.sdk.view.AerServFullScreenAdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+
+        <!--<activity-->
+            <!--android:name="com.inmobi.rendering.InMobiAdActivity"-->
+
+            <!--android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"-->
+            <!--android:hardwareAccelerated="true"-->
+            <!--android:resizeableActivity="false"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar"-->
+            <!--tools:ignore="UnusedAttribute"></activity>-->
+
+
+        <!--TODO: Ensure we include the mediated partner's activities in our manifest-->
+
+        <!--<activity-->
+        <!--android:name="com.mopub.mobileads.MoPubActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize" />-->
+        <!--<activity-->
+        <!--android:name="com.mopub.mobileads.MraidActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize" />-->
+        <!--<activity-->
+        <!--android:name="com.mopub.common.MoPubBrowser"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize" />-->
+        <!--<activity-->
+        <!--android:name="com.mopub.mobileads.MraidVideoPlayerActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize" />-->
+        <!--<activity-->
+        <!--android:name="com.mopub.mobileads.RewardedMraidActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize" />-->
+
+
+    </application>
+
+</manifest>

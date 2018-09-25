@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">InMobi Mediation Sample</string>
+    <string name="aerserv_sdk_version">AerServ SDK v%1$s</string>
+</resources>
