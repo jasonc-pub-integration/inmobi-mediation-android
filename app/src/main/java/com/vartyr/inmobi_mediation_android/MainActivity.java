@@ -14,10 +14,11 @@ import com.aerserv.sdk.AerServInterstitial;
 import com.aerserv.sdk.AerServSdk;
 import com.aerserv.sdk.AerServTransactionInformation;
 import com.aerserv.sdk.utils.UrlBuilder;
+import com.mopub.common.MoPub;
 
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity  {
 
     private AerServBanner banner;               // AS Banner
     private AerServInterstitial interstitial;   // AS Interstitial
@@ -29,9 +30,9 @@ public class MainActivity extends Activity {
 
 
     private final String LOG_TAG = "[INMOBIEXAMPLE]";
-    private final String APP_ID = "380000";
-    private final String AS_BANNER_PLC = "380000";
-    private final String AS_INTERSTITIAL_PLC = "380003";
+    private final String APP_ID = "1017037";
+    private final String AS_BANNER_PLC = "1055367"; // 1055367  / 380052
+    private final String AS_INTERSTITIAL_PLC = "1055368";
 
 
 
@@ -64,7 +65,10 @@ public class MainActivity extends Activity {
 
         // TODO: Do something with the view
         TextView SDKlabel = findViewById(R.id.coreSDKVersionLabel);
+        TextView MPlabel = findViewById(R.id.MPSDKVersionLabel);
+
         SDKlabel.setText("Core SDK Version: " + getString(R.string.aerserv_sdk_version, UrlBuilder.VERSION));
+        MPlabel.setText("MP SDK Version: " + MoPub.SDK_VERSION);
 
     }
 
